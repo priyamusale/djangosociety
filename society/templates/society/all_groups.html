@@ -1,0 +1,14 @@
+{% if group_list %}
+	<ul>
+	<h1>There are {{ count }} groups in the society!</h1>
+		{% for group in group_list %}
+			<li><a href="/society/groups/{{ group.id }}/">{{ group.name }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No groups yet.</p>
+{% endif %}
+<br>
+<form action='/society' method='GET' style="margin-left: 50%">
+<button type='submit'>Go Back</button>
+</form>

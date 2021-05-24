@@ -1,0 +1,22 @@
+<ul>
+	<h1>{{ person_obj.first_name }} {{ person_obj.last_name }}</h1>
+	<h2>{{ person_obj.birth_date }}</h2>
+	<h2>Username: {{ person_obj.username}}</h2>
+	<br>
+	<p>About Me</p>
+	<p>
+		{{ person_obj.about_me }}
+	</p>
+	<br>
+	<p>Favorite Movies</p>
+	<p>
+		{{ person_obj.fav_movies }}
+	</p>
+	<br>
+	<p>{{ person_obj.photo_url }}</p>
+
+</ul>
+
+<form action='/society/people' method='GET' style="margin-left: 50%">
+<button type='submit'>Go Back</button>
+</form>

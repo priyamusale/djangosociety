@@ -1,0 +1,14 @@
+{% if people_list %}
+	<ul>
+	<h1>There are {{ count }} people in the society!</h1>
+		{% for person in people_list %}
+			<li><a href="/society/people/{{ person.id }}/">{{ person.first_name }} {{ person.last_name }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No people yet</p>
+{% endif %}
+<br>
+<form action='/society' method='GET' style="margin-left: 50%">
+<button type='submit'>Go Back</button>
+</form>
